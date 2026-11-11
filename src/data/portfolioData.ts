@@ -8,7 +8,6 @@ import type {
 } from '../types/portfolio';
 
 const getAssetPath = (path: string) => {
-  // Removes leading slash if present to avoid double slashes
   const cleanPath = path.startsWith('/') ? path.slice(1) : path;
   return `${import.meta.env.BASE_URL}${cleanPath}`;
 };
@@ -27,8 +26,8 @@ firstName: "John Maxine",
 lastName: "Reyes",
 role: "Software Developer",
 summary: "Dedicated to building scalable and mantainable web and mobile applications by applying clean architechture and software engineering principles.",
-avatarUrl: "/images/avatar.jpg",
-resumeUrl: "/pdfs/resume.pdf",
+avatarUrl:  getAssetPath("/images/avatar.jpg"),
+resumeUrl:  getAssetPath("/pdfs/resume.pdf"),
 coverLetterUrl: getAssetPath("/images/cover_letter.jpg"),
 socialLinks: {
     github: "https://github.com/reymax164",
