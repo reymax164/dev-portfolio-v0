@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+@theme {
+  --font-heading: "Helvetica", "Arial", sans-serif;
+  --font-subheading: "Roboto", sans-serif;
+  --font-body: "Calibri", "Arial", sans-serif;
+}
