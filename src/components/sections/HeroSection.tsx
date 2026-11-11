@@ -45,19 +45,19 @@ export const HeroSection: React.FC = () => {
           <div className="flex-1 text-center md:text-left">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-100 text-emerald-700 text-xs font-semibold mb-6">
               <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-              Available for opportunities & projects
+              Available for OJT
             </div>
 
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-black tracking-tight mb-4">
-              Hi, I'm
-              <span className="text-emerald-600"> {heroData.firstName} {heroData.lastName}</span>
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-medium text-black tracking-tight mb-4">
+              Hi, I'm <br/>
+              <span className="text-3xl sm:text-4xl md:text-5xl text-emerald-600 font-bold mt-2"> {heroData.firstName} {heroData.lastName}</span>
             </h1>
 
-            <p className="text-xl md:text-2xl font-medium text-gray-700 mb-6">
+            <p className="text-xl md:text-xl font-normal italic text-gray-700 mb-6">
               {heroData.role}
             </p>
 
-            <p className="text-gray-600 text-base md:text-lg max-w-xl mb-8 leading-relaxed">
+            <p className="text-gray-600 text-base md:text-md max-w-xl mb-8 leading-relaxed">
               {heroData.summary || "Summary."}
             </p>
 
@@ -75,10 +75,20 @@ export const HeroSection: React.FC = () => {
                 href={heroData.resumeUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-white hover:bg-gray-50 text-gray-800 border border-gray-200 font-medium px-6 py-3 rounded-xl shadow-sm transition-all text-sm"
+                className="inline-flex items-center gap-2 bg-white hover:bg-emerald-50 text-gray-800 border border-gray-200 font-medium px-6 py-3 rounded-xl shadow-sm transition-all text-sm"
               >
                 <FileText className="w-4 h-4 text-gray-500" />
                 Resume
+              </a>
+
+                            <a
+                href={heroData.coverLetterUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-white hover:bg-emerald-50 text-gray-800 border border-gray-200 font-medium px-6 py-3 rounded-xl shadow-sm transition-all text-sm"
+              >
+                <FileText className="w-4 h-4 text-gray-500" />
+                Cover Letter
               </a>
             </div>
 
@@ -108,12 +118,12 @@ export const HeroSection: React.FC = () => {
 
           {/* Visual / Avatar Box */}
           <div className="relative shrink-0">
-            <div className="w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 rounded-2xl bg-gradient-to-tr from-emerald-600 to-teal-400 p-1 shadow-xl">
+            <div className="w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 rounded-2xl bg-linear-to-tr from-emerald-600 to-teal-400 p-1 shadow-xl">
               <div className="w-full h-full bg-white rounded-2xl flex items-center justify-center overflow-hidden">
                 {heroData.avatarUrl && heroData.avatarUrl !== "/" ? (
                   <img
                     src={heroData.avatarUrl}
-                    alt={`${heroData.firstName} ${heroData.lastName}`}
+                    alt={`avatar`}
                     className="w-full h-full object-cover"
                   />
                 ) : (

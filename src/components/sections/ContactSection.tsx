@@ -1,5 +1,3 @@
-// src/components/ContactSection.tsx
-
 import React, { useState } from 'react';
 import { heroData } from '../../data/portfolioData';
 import { Mail, Send, MapPin, CheckCircle2 } from 'lucide-react';
@@ -25,11 +23,14 @@ export const ContactSection: React.FC = () => {
             <Mail className="w-3.5 h-3.5" />
             Get in Touch
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 tracking-tight mb-4">
-            Let's Work Together
+          
+          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 tracking-tight mb-4 leading-tight">
+            Let's <span className="text-emerald-600">Work</span> <br />
+            <span className="font-serif italic font-normal text-gray-900">Together.</span>
           </h2>
+
           <p className="text-gray-600 text-base">
-            Have a project in mind, an opportunity, or just want to connect? Drop a message below and I'll get back to you promptly.
+            Have a project in mind? Drop a message below and I'll get back to you promptly.
           </p>
         </div>
 
@@ -42,24 +43,24 @@ export const ContactSection: React.FC = () => {
               
               <div className="space-y-4 text-sm text-gray-600">
                 <div className="flex items-start gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <div className="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0 mt-0.5">
                     <Mail className="w-4 h-4" />
                   </div>
                   <div>
                     <p className="font-semibold text-gray-900">Email</p>
-                    <a href={`mailto:contact@${heroData.lastName.toLowerCase()}.com`} className="hover:text-emerald-600 transition-colors">
-                      contact@{heroData.lastName.toLowerCase()}.com
+                    <a href={`mailto:reyesmaxine164@gmail.com`} className="hover:text-emerald-600 transition-colors">
+                      reyesmaxine164@gmail.com
                     </a>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <div className="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0 mt-0.5">
                     <MapPin className="w-4 h-4" />
                   </div>
                   <div>
                     <p className="font-semibold text-gray-900">Location</p>
-                    <p>Available Worldwide / Remote</p>
+                    <p>Batangas, Philippines</p>
                   </div>
                 </div>
               </div>
@@ -91,6 +92,7 @@ export const ContactSection: React.FC = () => {
           {/* Contact Form Column */}
           <div className="lg:col-span-7">
             <div className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm relative">
+              <h3 className="text-xl font-bold text-gray-900 mb-6">Drop a Message</h3>
               {submitted ? (
                 <div className="py-16 text-center space-y-4">
                   <div className="w-12 h-12 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center mx-auto">
@@ -118,7 +120,7 @@ export const ContactSection: React.FC = () => {
                       required
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      placeholder="John Doe"
+                      placeholder="You Name"
                       className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 text-sm transition-all"
                     />
                   </div>
@@ -132,7 +134,7 @@ export const ContactSection: React.FC = () => {
                       required
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      placeholder="john@example.com"
+                      placeholder="youremail@example.com"
                       className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 text-sm transition-all"
                     />
                   </div>
