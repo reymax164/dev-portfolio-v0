@@ -21,7 +21,7 @@ export const SkillCard: React.FC<SkillCardProps> = ({ categoryData }) => {
             >
               {/* Skill Icons CDN badge */}
               <img
-                src={`https://skillicons.dev/icons?i=${skill.icon}`}
+                src={`https://skillicons.dev/icons?i=${skill.icon}&theme=light`}
                 alt={skill.name}
                 className="w-7 h-7 shrink-0 group-hover:scale-110 transition-transform"
                 loading="lazy"
