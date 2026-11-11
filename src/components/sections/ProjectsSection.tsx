@@ -1,9 +1,7 @@
-// src/components/sections/ProjectsSection.tsx
-
 import React from 'react';
 import { projects, heroData } from '../../data/portfolioData';
 import { ProjectCard } from '../ProjectCard';
-import { FolderGit2, Activity } from 'lucide-react';
+import { FolderGit2 } from 'lucide-react';
 import { FaGithub } from 'react-icons/fa6';
 
 export const ProjectsSection: React.FC = () => {

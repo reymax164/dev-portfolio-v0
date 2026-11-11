@@ -1,6 +1,4 @@
-// src/App.tsx
-
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Navbar } from './components/Navbar';
 import { HeroSection } from './components/sections/HeroSection';
 import { SkillsSection } from './components/sections/SkillsSection';
