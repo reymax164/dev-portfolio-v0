@@ -2,7 +2,6 @@
 
 import React from 'react';
 import { heroData } from '../data/portfolioData';
-import { Heart } from 'lucide-react';
 
 export const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
