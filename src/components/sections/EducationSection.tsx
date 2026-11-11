@@ -17,7 +17,7 @@ export const EducationSection: React.FC = () => {
             Education
           </h2>
           <p className="text-gray-600 text-base">
-            My formal academic foundation in information technology and software engineering principles.
+            My educational Attainement.
           </p>
         </div>
 
@@ -29,7 +29,7 @@ export const EducationSection: React.FC = () => {
               className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all relative overflow-hidden"
             >
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
-                <h3 className="text-xl font-bold text-gray-900">
+                <h3 className="text-xl font-bold text-gray-900 transition-colors cursor-default">
                   {edu.degree}
                 </h3>
                 <span className="inline-flex items-center gap-1 text-xs font-semibold text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full w-fit">
@@ -38,7 +38,7 @@ export const EducationSection: React.FC = () => {
                 </span>
               </div>
 
-              <p className="text-base font-semibold text-gray-700 mb-6">
+              <p className="text-md font-semibold font text-emerald-700 mb-6">
                 {edu.institution}
               </p>
 
@@ -51,7 +51,7 @@ export const EducationSection: React.FC = () => {
                   {edu.coursework.map((course) => (
                     <span
                       key={course}
-                      className="text-xs font-medium bg-gray-50 hover:bg-emerald-600 text-gray-700 hover:text-white border border-gray-100 px-3 py-1.5 rounded-xl cursor-pointer"
+                      className="text-xs font-medium bg-gray-50 hover:bg-emerald-600 text-gray-700 hover:text-white border border-gray-100 px-3 py-1.5 rounded-xl transition-colors"
                     >
                       {course}
                     </span>

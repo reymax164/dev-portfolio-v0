@@ -10,6 +10,7 @@ export interface HeroData {
   summary: string;
   avatarUrl: string;
   resumeUrl: string;
+  coverLetterUrl: string;
   socialLinks: {
     github: string;
     linkedin: string;

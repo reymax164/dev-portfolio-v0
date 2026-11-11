@@ -1,10 +1,10 @@
 import type {
-NavItem,
-HeroData,
-SkillCategory,
-Project,
-Certification,
-Education,
+  NavItem,
+  HeroData,
+  SkillCategory,
+  Project,
+  Certification,
+  Education,
 } from '../types/portfolio';
 
 export const navItems: NavItem[] = [
@@ -20,12 +20,13 @@ export const heroData: HeroData = {
 firstName: "John Maxine",
 lastName: "Reyes",
 role: "Software Developer",
-summary: "Desicated to building scalable and mantainable web and mobile applications by applying clean architechture and software engineering principles. Curious in learning many things.",
-avatarUrl: "/files/images/avatar.jpg",
-resumeUrl: "/files/pdfs/resume.pdf",
+summary: "Dedicated to building scalable and mantainable web and mobile applications by applying clean architechture and software engineering principles.",
+avatarUrl: "/images/avatar.jpg",
+resumeUrl: "/pdfs/resume.pdf",
+coverLetterUrl: "/images/cover_letter.jpg",
 socialLinks: {
     github: "https://github.com/reymax164",
-    linkedin: "https://linkedin.com/in/",
+    linkedin: "https://http://linkedin.com/in/john-maxine-reyes-b8aa433a6",
 },
 };
 
@@ -94,7 +95,7 @@ export const projects: Project[] = [
     title: "School Management & Enrollment System",
     dateRange: "2026",
     image: "/",
-    technologies: ["Laravel", "Tailwind CSS", "Supabase", "PostgreSQL"],
+    technologies: ["Laravel", "Tailwind CSS", "Supabase", "PostgreSQL", "Semaphore API"],
     description: "A multi-role web portal for students, teachers, registrars, and cashiers featuring synchronized data workflows and role-based access control.",
     liveUrl: "https://gscab.tech",
     githubUrl: "https://github.com/",
@@ -103,7 +104,7 @@ export const projects: Project[] = [
     id: "sonlight",
     title: "Sonlight",
     dateRange: "2024",
-    image: "/",
+    image: "/images/projects/sonlight.png",
     technologies: ["HTML5", "CSS3", "JavaScript"],
     description: "Collaborated with a web application of a business concept in Technopreneurship course",
     liveUrl: "https://iskadoodle.github.io/SONLIGHT/",
@@ -114,17 +115,25 @@ export const projects: Project[] = [
 export const certifications: Certification[] = [
     {
         id: "aws-certificate",
-        title: "Could Foundations",
+        title: "Cloud Foundations",
         issuer: "AWS Academy",
         date: "October 2026",
         imageUrl: "/",
-        pdfUrl: "/files/pdfs/resume.pdf",
+        pdfUrl: "/pdfs/resume.pdf",
     },
     {
         id: "sap-certificate",
         title: "SAP Training Program Certificate of Participation",
         issuer: "SAP University Alliences",
         date: "June 2025",
+        imageUrl: "/",
+        pdfUrl: "",
+    },
+    {
+        id: "java-certificate",
+        title: "Java Fundamentals",
+        issuer: "Oracle Academy",
+        date: "June 2024",
         imageUrl: "/",
         pdfUrl: "",
     },
@@ -138,6 +147,7 @@ export const education: Education[] = [
         year: "2023 – Present",
         coursework: [
         "Java Programming & OOP",
+        "Data Structures & Algorithms",
         "Operating Systems",
         "Database Management Systems",
         "C# Programming & WinForms",

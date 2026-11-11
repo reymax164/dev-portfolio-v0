@@ -1,5 +1,3 @@
-// src/components/ProjectCard.tsx
-
 import React from 'react';
 import type { Project } from '../types/portfolio';
 import { ExternalLink, GitFork, Calendar } from 'lucide-react';
@@ -9,15 +7,26 @@ interface ProjectCardProps {
 }
 
 export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
+  // Supports 'image' or 'imageUrl' depending on how it's named in your portfolioData.ts
+  const projectImage = project.image || project.image;
+
   return (
-    <div className="bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all overflow-hidden flex flex-col justify-between cursor-pointer group">
+    <div className="bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all overflow-hidden flex flex-col justify-between group">
       <div>
         {/* Project Thumbnail / Preview Box */}
         <div className="relative h-48 bg-linear-to-br from-gray-100 to-gray-200 overflow-hidden flex items-center justify-center border-b border-gray-100">
-          <div className="text-center p-4">
-            <span className="text-xs font-semibold text-gray-400 uppercase tracking-wider">Project Preview</span>
-            <p className="text-sm font-medium text-gray-600 mt-1">{project.title}</p>
-          </div>
+          {projectImage && projectImage !== '/' ? (
+            <img
+              src={projectImage}
+              alt={project.title}
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+          ) : (
+            <div className="text-center p-4">
+              <span className="text-xs font-semibold text-gray-400 uppercase tracking-wider">Project Preview</span>
+              {/* <p className="text-sm font-medium text-gray-600 mt-1">{project.title}</p> */}
+            </div>
+          )}
         </div>
 
         {/* Content Area */}
