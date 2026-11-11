@@ -7,6 +7,12 @@ import type {
   Education,
 } from '../types/portfolio';
 
+const getAssetPath = (path: string) => {
+  // Removes leading slash if present to avoid double slashes
+  const cleanPath = path.startsWith('/') ? path.slice(1) : path;
+  return `${import.meta.env.BASE_URL}${cleanPath}`;
+};
+
 export const navItems: NavItem[] = [
 { label: "Home", href: "#home" },
 { label: "Skills", href: "#skills" },
@@ -23,7 +29,7 @@ role: "Software Developer",
 summary: "Dedicated to building scalable and mantainable web and mobile applications by applying clean architechture and software engineering principles.",
 avatarUrl: "/images/avatar.jpg",
 resumeUrl: "/pdfs/resume.pdf",
-coverLetterUrl: "/images/cover_letter.jpg",
+coverLetterUrl: getAssetPath("/images/cover_letter.jpg"),
 socialLinks: {
     github: "https://github.com/reymax164",
     linkedin: "https://http://linkedin.com/in/john-maxine-reyes-b8aa433a6",
@@ -94,7 +100,7 @@ export const projects: Project[] = [
     id: "school-management-system",
     title: "School Management & Enrollment System",
     dateRange: "2026",
-    image: "/",
+    image: getAssetPath("#"),
     technologies: ["Laravel", "Tailwind CSS", "Supabase", "PostgreSQL", "Semaphore API"],
     description: "A multi-role web portal for students, teachers, registrars, and cashiers featuring synchronized data workflows and role-based access control.",
     liveUrl: "https://gscab.tech",
@@ -104,7 +110,7 @@ export const projects: Project[] = [
     id: "sonlight",
     title: "Sonlight",
     dateRange: "2024",
-    image: "/images/projects/sonlight.png",
+    image: getAssetPath("/images/projects/sonlight.png"),
     technologies: ["HTML5", "CSS3", "JavaScript"],
     description: "Collaborated with a web application of a business concept in Technopreneurship course",
     liveUrl: "https://iskadoodle.github.io/SONLIGHT/",
