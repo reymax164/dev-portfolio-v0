@@ -9,6 +9,8 @@ export function CursorTrail() {
     const trail = trailRef.current;
     if (!trail) return;
 
+    const root = document.documentElement;
+
     const dots = Array.from(trail.children) as HTMLDivElement[];
     const points = Array.from({ length: TRAIL_LENGTH }, () => ({ x: 0, y: 0 }));
     let target = { x: 0, y: 0 };
@@ -48,6 +50,7 @@ export function CursorTrail() {
       }
 
       target = { x: event.clientX, y: event.clientY };
+      root.classList.add('cursor-trail-active');
       trail.classList.add('is-visible');
 
       if (!initialized) {
@@ -65,18 +68,27 @@ export function CursorTrail() {
     };
 
     const hideTrail = () => trail.classList.remove('is-visible');
+    const handleTouch = (event: PointerEvent) => {
+      if (event.pointerType === 'touch') {
+        root.classList.remove('cursor-trail-active');
+        hideTrail();
+      }
+    };
     const handlePointerOut = (event: MouseEvent) => {
       if (!event.relatedTarget) hideTrail();
     };
 
     window.addEventListener('pointermove', handlePointerMove);
+    window.addEventListener('pointerdown', handleTouch);
     window.addEventListener('mouseout', handlePointerOut);
     window.addEventListener('blur', hideTrail);
 
     return () => {
       window.removeEventListener('pointermove', handlePointerMove);
+      window.removeEventListener('pointerdown', handleTouch);
       window.removeEventListener('mouseout', handlePointerOut);
       window.removeEventListener('blur', hideTrail);
+      root.classList.remove('cursor-trail-active');
       if (frameId !== null) cancelAnimationFrame(frameId);
     };
   }, []);

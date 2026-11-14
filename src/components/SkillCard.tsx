@@ -7,7 +7,7 @@ interface SkillCardProps {
 
 export const SkillCard: React.FC<SkillCardProps> = ({ categoryData }) => {
   return (
-    <div className="bg-white dark:bg-gray-900 p-6 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-md transition-colors flex flex-col justify-between cursor-pointer">
+    <div className="bg-white dark:bg-gray-900 p-6 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-md transition-colors flex flex-col justify-between">
       <div>
         <h3 className="text-lg font-bold mb-4 pb-2 border-b border-gray-100 dark:border-gray-800">
           {categoryData.category}

@@ -8,12 +8,8 @@
 
 html {
   scroll-padding-top: 4rem;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  html {
-    scroll-behavior: smooth;
-  }
+  scroll-behavior: smooth;
+  cursor: none;
 }
 
 #root .app-interaction,
@@ -28,26 +24,18 @@ html {
   user-select: text;
 }
 
-@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
-  #root .app-interaction,
-  #root .app-interaction * {
-    cursor: none;
-  }
-
-  .cursor-trail {
-    display: block;
-  }
+html.cursor-trail-active #root .app-interaction,
+html.cursor-trail-active #root .app-interaction * {
+  cursor: none;
 }
 
-@media (hover: none), (pointer: coarse), (prefers-reduced-motion: reduce) {
-  #root .app-interaction,
-  #root .app-interaction * {
-    cursor: auto;
-  }
+html.cursor-trail-active #root .app-interaction input,
+html.cursor-trail-active #root .app-interaction textarea,
+html.cursor-trail-active #root .app-interaction [contenteditable="true"] {
+  cursor: text;
 }
 
 .cursor-trail {
-  display: none;
   position: fixed;
   inset: 0;
   z-index: 100;
@@ -119,16 +107,6 @@ html {
 
 .dark .cursor-trail__dot--4 {
   background: rgb(110 231 183 / 8%);
-}
-
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-
-  .cursor-trail {
-    display: none;
-  }
 }
 
 import React from 'react'

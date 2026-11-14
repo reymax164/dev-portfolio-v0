@@ -29,7 +29,7 @@ export const EducationSection: React.FC = () => {
               className="bg-white dark:bg-gray-900 p-8 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-md transition-all relative overflow-hidden"
             >
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white transition-colors cursor-default">
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white transition-colors">
                   {edu.degree}
                 </h3>
                 <span className="inline-flex items-center gap-1 text-xs font-semibold text-emerald-700 dark:text-emerald-300 bg-emerald-50 dark:bg-emerald-950/50 px-3 py-1 rounded-full w-fit">

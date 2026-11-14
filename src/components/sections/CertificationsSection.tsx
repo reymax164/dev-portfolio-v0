@@ -56,7 +56,7 @@ export const CertificationsSection: React.FC = () => {
                   onClick={() => setSelectedCert(cert)}
                   className="inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300 transition-colors"
                 >
-                  <FileText className="w-4 h-4 cursor-pointer" />
+                  <FileText className="w-4 h-4" />
                   View Certificate
                 </button>
               </div>
@@ -83,7 +83,7 @@ export const CertificationsSection: React.FC = () => {
               </div>
               <button
                 onClick={() => setSelectedCert(null)}
-                className="p-1 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors cursor-pointer"
+                className="p-1 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
               >
                 <X className="w-5 h-5" />
               </button>
