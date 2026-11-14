@@ -1,7 +1,7 @@
 // src/components/Navbar.tsx
 
 import React, { useState, useEffect } from 'react';
-import { navItems, heroData } from '../data/portfolioData';
+import { navItems, homeData } from '../data/portfolioData';
 
 export const Navbar: React.FC = () => {
   const [activeSection, setActiveSection] = useState('home');
@@ -29,13 +29,12 @@ export const Navbar: React.FC = () => {
   }, []);
 
   return (
-    <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100 transition-colors duration-300"> 
+    <header className="sticky top-0 z-50 bg-white/80 dark:bg-gray-950/80 backdrop-blur-md border-b border-gray-100 dark:border-gray-800 transition-colors duration-300">
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-        <a href="#home" className="font-bold text-md text-emerald-600 tracking-tight">
-          {heroData.firstName} {heroData.lastName}
+        <a href="#home" className="font-bold text-md text-emerald-700 dark:text-emerald-400 tracking-tight cursor-pointer">
+          {homeData.firstName} {homeData.lastName}
         </a>
-        {/* dark:bg-gray-950/80 dark:border-gray-800 dark:text-emerald-400*/}
-        <nav className="hidden md:flex items-center space-x-8">
+        <nav className="hidden md:flex items-center space-x-8 cursor-pointer">
           {navItems.map((item) => {
             const sectionId = item.href.replace('#', '');
             const isActive = activeSection === sectionId;

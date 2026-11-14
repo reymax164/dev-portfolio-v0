@@ -1,11 +1,11 @@
 import React from 'react';
-import { heroData } from '../../data/portfolioData';
+import { homeData } from '../../data/portfolioData';
 import { Activity } from 'lucide-react';
 import { FaGithub } from 'react-icons/fa6';
 
 export const GithubSection: React.FC = () => {
   // Extract username from socialLinks.github (e.g., https://github.com/username -> username)
-  const username = heroData.socialLinks.github.replace(/\/$/, '').split('/').pop() || '';
+  const username = homeData.socialLinks.github.replace(/\/$/, '').split('/').pop() || '';
 
   return (
     <section id="github" className="py-20 bg-gray-50/50 dark:bg-gray-900/50 transition-colors duration-300">
@@ -40,7 +40,7 @@ export const GithubSection: React.FC = () => {
             <div className="py-12 text-center text-gray-400">
               <FaGithub className="w-10 h-10 mx-auto mb-3 text-gray-300 dark:text-gray-700" />
               <p className="text-sm font-medium">
-                Add your GitHub username in <code className="text-emerald-600">portfolioData.ts</code> to display your live activity graph.
+                Add your GitHub username in <code className="text-emerald-600 dark:text-emerald-400">portfolioData.ts</code> to display your live activity graph.
               </p>
             </div>
           )}
@@ -49,7 +49,7 @@ export const GithubSection: React.FC = () => {
           <div className="mt-6 pt-6 border-t border-gray-100 dark:border-gray-800 w-full flex items-center justify-between text-xs text-gray-500 dark:text-gray-400">
             <span>Data synced directly from GitHub</span>
             <a
-              href={heroData.socialLinks.github}
+              href={homeData.socialLinks.github}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 font-semibold text-emerald-600 dark:text-emerald-400 hover:underline"

@@ -1,12 +1,13 @@
 import { useState, useEffect } from 'react';
 import { Navbar } from './components/Navbar';
-import { HeroSection } from './components/sections/HeroSection';
+import { HomeSection } from './components/sections/HomeSection';
 import { SkillsSection } from './components/sections/SkillsSection';
 import { ProjectsSection } from './components/sections/ProjectsSection';
 import { CertificationsSection } from './components/sections/CertificationsSection';
 import { EducationSection } from './components/sections/EducationSection';
 import { ContactSection } from './components/sections/ContactSection';
 import { Footer } from './components/Footer';
+import { CursorTrail } from './components/CursorTrail';
 import { Sun, Moon } from 'lucide-react';
 
 export function App() {
@@ -27,16 +28,17 @@ export function App() {
       root.classList.remove('dark');
       localStorage.setItem('theme', 'light');
     }
-  }, [isDarkMode]);
+  }, [isDarkMode])
 
   const toggleDarkMode = () => setIsDarkMode((prev) => !prev);
 
   return (
-    <div className="min-h-screen bg-white text-gray-900 selection:bg-emerald-500 selection:text-white transition-colors duration-300">
+    <div className="app-interaction min-h-screen select-none cursor-none bg-white text-gray-900 dark:bg-gray-950 dark:text-gray-100 selection:bg-emerald-500 selection:text-white transition-colors duration-300">
       <button
         onClick={toggleDarkMode}
         aria-label="Toggle Theme"
-        className="fixed bottom-6 right-6 z-50 p-3.5 rounded-full bg-white text-gray-800 border border-gray-200 shadow-lg hover:scale-105 active:scale-95 transition-all duration-200 focus:outline-none"
+        aria-pressed={isDarkMode}
+        className="fixed bottom-6 right-6 z-50 p-3.5 rounded-full bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-100 border border-gray-200 dark:border-gray-700 shadow-lg hover:scale-105 active:scale-95 transition-all duration-200 focus:outline-none"
       >
         {isDarkMode ? (
           <Sun className="w-5 h-5 text-amber-400 fill-amber-400/20" />
@@ -47,14 +49,15 @@ export function App() {
 
       <Navbar />
       <main>
-        <HeroSection />
+        <HomeSection />
         <SkillsSection />
-        <ProjectsSection />
+        <ProjectsSection isDarkMode={isDarkMode} />
         <CertificationsSection />
         <EducationSection />
         <ContactSection />
       </main>
       <Footer />
+      <CursorTrail />
     </div>
   );
 }

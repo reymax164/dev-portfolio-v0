@@ -3,7 +3,7 @@ export interface NavItem {
   href: string;
 }
 
-export interface HeroData {
+export interface HomeData {
   firstName: string;
   lastName: string;
   role: string;

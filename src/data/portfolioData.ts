@@ -1,6 +1,6 @@
 import type {
   NavItem,
-  HeroData,
+  HomeData,
   SkillCategory,
   Project,
   Certification,
@@ -21,17 +21,17 @@ export const navItems: NavItem[] = [
 { label: "Contact", href: "#contact" },
 ];
 
-export const heroData: HeroData = {
+export const homeData: HomeData = {
 firstName: "John Maxine",
 lastName: "Reyes",
 role: "Software Developer",
-summary: "Dedicated to building scalable and mantainable web and mobile applications by applying clean architechture and software engineering principles.",
+summary: "BS in Information Technology student from STI College Batangas. Dedicated to building scalable and mantainable web and mobile applications by applying clean architechture and software engineering principles.",
 avatarUrl:  getAssetPath("/images/avatar.jpg"),
 resumeUrl:  getAssetPath("/pdfs/resume.pdf"),
 coverLetterUrl: getAssetPath("/images/cover_letter.jpg"),
 socialLinks: {
     github: "https://github.com/reymax164",
-    linkedin: "https://http://linkedin.com/in/john-maxine-reyes-b8aa433a6",
+    linkedin: "https://linkedin.com/in/john-maxine-reyes-b8aa433a6",
 },
 };
 
@@ -99,9 +99,9 @@ export const projects: Project[] = [
     id: "school-management-system",
     title: "School Management & Enrollment System",
     dateRange: "2026",
-    image: getAssetPath("#"),
+    image: getAssetPath("/images/projects/gscab.png"),
     technologies: ["Laravel", "Tailwind CSS", "Supabase", "PostgreSQL", "Semaphore API"],
-    description: "A multi-role web portal for students, teachers, registrars, and cashiers featuring synchronized data workflows and role-based access control.",
+    description: "Developed a multi-role web portal for students, teachers, registrars, and cashiers featuring synchronized data workflows and role-based access control. Integrated SMS notifications.",
     liveUrl: "https://gscab.tech",
     githubUrl: "https://github.com/",
 },
@@ -111,7 +111,7 @@ export const projects: Project[] = [
     dateRange: "2024",
     image: getAssetPath("/images/projects/sonlight.png"),
     technologies: ["HTML5", "CSS3", "JavaScript"],
-    description: "Collaborated with a web application of a business concept in Technopreneurship course",
+    description: "Collaborated in a web application of a business concept in the Technopreneurship course of the BSIT program of STI College Batangas.",
     liveUrl: "https://iskadoodle.github.io/SONLIGHT/",
     githubUrl: "https://github.com/iSkaDoodle/SONLIGHT",
 },
@@ -123,7 +123,15 @@ export const certifications: Certification[] = [
         title: "Cloud Foundations",
         issuer: "AWS Academy",
         date: "October 2026",
-        imageUrl: "/",
+        imageUrl: "/images/certs//aws-certificate.jpg",
+        pdfUrl: "/pdfs/resume.pdf",
+    },
+    {
+        id: "codefest-certificate",
+        title: "Tagisan ng Talino: Codefest Local Level Champion",
+        issuer: "STI College Batangas",
+        date: "March 2026",
+        imageUrl: "/images/certs/codefest-certificate.jpg",
         pdfUrl: "/pdfs/resume.pdf",
     },
     {
@@ -131,7 +139,7 @@ export const certifications: Certification[] = [
         title: "SAP Training Program Certificate of Participation",
         issuer: "SAP University Alliences",
         date: "June 2025",
-        imageUrl: "/",
+        imageUrl: "/images/certs/sap-certificate.jpg",
         pdfUrl: "",
     },
     {
@@ -139,7 +147,31 @@ export const certifications: Certification[] = [
         title: "Java Fundamentals",
         issuer: "Oracle Academy",
         date: "June 2024",
-        imageUrl: "/",
+        imageUrl: "/images/certs/java-certificate.jpg",
+        pdfUrl: "",
+    },
+    {
+        id: "technopreneurship-certificate",
+        title: "TECHNOPRENEURSHIP: GOVERNMENT INITIATIVE FOR STARTUP SUCCESS (DSDAP CARAVAN)",
+        issuer: "DICT Region IV-A",
+        date: "May 2024",
+        imageUrl: "/images/certs/technopreneurship-certificate.jpg",
+        pdfUrl: "",
+    },
+    {
+        id: "cyberseurity-awareness-certificate",
+        title: "Cybersecurity Awareness for STI College - Batangas",
+        issuer: "DICT Region IV-A",
+        date: "May 2024",
+        imageUrl: "/images/certs/cybersecurity-awareness-certificate.jpg",
+        pdfUrl: "",
+    },
+    {
+        id: "egov-certificate",
+        title: "eGOVPh Super App Orientation",
+        issuer: "DICT Region IV-A",
+        date: "May 2024",
+        imageUrl: "/images/certs/egov-certificate.jpg",
         pdfUrl: "",
     },
 ];
@@ -153,10 +185,11 @@ export const education: Education[] = [
         coursework: [
         "Java Programming & OOP",
         "Data Structures & Algorithms",
+        "Systems Administration & Maintenance",
         "Operating Systems",
         "Database Management Systems",
-        "C# Programming & WinForms",
-        "AppDev & Emerging Tech (SDLC/Software Eng)",
+        "C# Programming w/ WinForms",
+        "Application Development & Emerging Technologies",
         "Android Development (Java)",
         "Web Development & ASP.NET",
         "Computer Graphics Programming",
