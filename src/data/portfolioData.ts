@@ -123,7 +123,7 @@ export const certifications: Certification[] = [
         title: "Cloud Foundations",
         issuer: "AWS Academy",
         date: "October 2026",
-        imageUrl: "/images/certs//aws-certificate.jpg",
+        imageUrl: getAssetPath("/images/certs//aws-certificate.jpg"),
         pdfUrl: "/pdfs/resume.pdf",
     },
     {
@@ -131,7 +131,7 @@ export const certifications: Certification[] = [
         title: "Tagisan ng Talino: Codefest Local Level Champion",
         issuer: "STI College Batangas",
         date: "March 2026",
-        imageUrl: "/images/certs/codefest-certificate.jpg",
+        imageUrl: getAssetPath("/images/certs/codefest-certificate.jpg"),
         pdfUrl: "/pdfs/resume.pdf",
     },
     {
@@ -139,7 +139,7 @@ export const certifications: Certification[] = [
         title: "SAP Training Program Certificate of Participation",
         issuer: "SAP University Alliences",
         date: "June 2025",
-        imageUrl: "/images/certs/sap-certificate.jpg",
+        imageUrl: getAssetPath("/images/certs/sap-certificate.jpg"),
         pdfUrl: "",
     },
     {
@@ -147,7 +147,7 @@ export const certifications: Certification[] = [
         title: "Java Fundamentals",
         issuer: "Oracle Academy",
         date: "June 2024",
-        imageUrl: "/images/certs/java-certificate.jpg",
+        imageUrl: getAssetPath("/images/certs/java-certificate.jpg"),
         pdfUrl: "",
     },
     {
@@ -155,7 +155,7 @@ export const certifications: Certification[] = [
         title: "TECHNOPRENEURSHIP: GOVERNMENT INITIATIVE FOR STARTUP SUCCESS (DSDAP CARAVAN)",
         issuer: "DICT Region IV-A",
         date: "May 2024",
-        imageUrl: "/images/certs/technopreneurship-certificate.jpg",
+        imageUrl: getAssetPath("/images/certs/technopreneurship-certificate.jpg"),
         pdfUrl: "",
     },
     {
@@ -163,7 +163,7 @@ export const certifications: Certification[] = [
         title: "Cybersecurity Awareness for STI College - Batangas",
         issuer: "DICT Region IV-A",
         date: "May 2024",
-        imageUrl: "/images/certs/cybersecurity-awareness-certificate.jpg",
+        imageUrl: getAssetPath("/images/certs/cybersecurity-awareness-certificate.jpg"),
         pdfUrl: "",
     },
     {
@@ -171,7 +171,7 @@ export const certifications: Certification[] = [
         title: "eGOVPh Super App Orientation",
         issuer: "DICT Region IV-A",
         date: "May 2024",
-        imageUrl: "/images/certs/egov-certificate.jpg",
+        imageUrl: getAssetPath("/images/certs/egov-certificate.jpg"),
         pdfUrl: "",
     },
 ];
