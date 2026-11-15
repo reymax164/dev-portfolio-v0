@@ -38,7 +38,7 @@ export function App() {
         onClick={toggleDarkMode}
         aria-label="Toggle Theme"
         aria-pressed={isDarkMode}
-        className="fixed bottom-6 right-6 z-50 p-3.5 rounded-full bg-white hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 text-gray-800 dark:text-gray-100 border border-gray-200 dark:border-gray-700 shadow-lg hover:scale-105 active:scale-95 transition-all duration-200 focus:outline-none"
+        className="fixed bottom-6 right-6 z-50 p-3.5 rounded-full bg-white hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 text-gray-800 dark:text-gray-100 border border-gray-400/50 dark:border-gray-700 hover:border-emerald-600 dark:hover:border-amber-400 shadow-lg hover:scale-105 active:scale-95 transition-all duration-200 focus:outline-none"
       >
         {isDarkMode ? (
           <Sun className="w-5 h-5 text-amber-400 fill-amber-400/20" />

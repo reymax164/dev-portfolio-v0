@@ -9,7 +9,7 @@ export const CertificationsSection: React.FC = () => {
   const [selectedCert, setSelectedCert] = useState<Certification | null>(null);
 
   return (
-    <section id="certifications" className="py-20 bg-gray-100/50 dark:bg-gray-900/50 transition-colors duration-300">
+    <section id="certifications" className="py-20 bg-gray-200/50 dark:bg-gray-900/50 transition-colors duration-300">
       <div className="max-w-6xl mx-auto px-6">
         
         {/* Section Header */}

@@ -37,7 +37,7 @@ const Linkedin: React.FC<{ className?: string }> = ({ className }) => (
 
 export const HomeSection: React.FC = () => {
   return (
-    <section id="home" className="pt-24 pb-16 md:pt-32 md:pb-24 bg-linear-to-b bg-gray-100/50 dark:bg-gray-900/50 transition-colors duration-300">
+    <section id="home" className="pt-24 pb-16 md:pt-32 md:pb-24 bg-linear-to-b bg-gray-200/50 dark:bg-gray-900/50 transition-colors duration-300">
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-12">
           
@@ -76,7 +76,7 @@ export const HomeSection: React.FC = () => {
                 href={homeData.resumeUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-white dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-800 dark:text-gray-100 border border-gray-200 dark:border-gray-700 font-medium px-6 py-3 rounded-xl shadow-sm transition-all text-sm"
+                className="inline-flex items-center gap-2 bg-white dark:bg-gray-800 hover:bg-gray-200/50 dark:hover:bg-gray-700 text-gray-800 dark:text-gray-100 border border-gray-300/75 dark:border-gray-700 font-medium px-6 py-3 rounded-xl shadow-sm transition-all text-sm"
               >
                 <FileText className="w-4 h-4 text-gray-500 dark:text-gray-400" />
                 Resume
@@ -86,7 +86,7 @@ export const HomeSection: React.FC = () => {
                 href={homeData.coverLetterUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-white dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-800 dark:text-gray-100 border border-gray-200 dark:border-gray-700 font-medium px-6 py-3 rounded-xl shadow-sm transition-all text-sm"
+                className="inline-flex items-center gap-2 bg-white dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-800 dark:text-gray-100 border border-gray-300/75 dark:border-gray-700 font-medium px-6 py-3 rounded-xl shadow-sm transition-all text-sm"
               >
                 <FileText className="w-4 h-4 text-gray-500 dark:text-gray-400" />
                 Cover Letter

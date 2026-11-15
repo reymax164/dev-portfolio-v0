@@ -14,7 +14,7 @@ export const ProjectsSection: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode 
   const username = homeData.socialLinks.github.replace(/\/$/, '').split('/').pop() || '';
 
   return (
-    <section id="projects" className="py-20 bg-gray-100/50 dark:bg-gray-900/50 transition-colors duration-300">
+    <section id="projects" className="py-20 bg-gray-200/50 dark:bg-gray-900/50 transition-colors duration-300">
       <div className="max-w-6xl mx-auto px-6">
         
         {/* Section Header */}
@@ -46,7 +46,7 @@ export const ProjectsSection: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode 
             </h3>
           </div>
 
-          <div className="bg-gray-50/50 dark:bg-gray-800/50 p-6 rounded-2xl border border-gray-100 dark:border-gray-700 shadow-xs overflow-hidden flex flex-col items-center">
+          <div className="bg-white dark:bg-gray-800/50 p-6 rounded-2xl border border-gray-100 dark:border-gray-700 shadow-xs overflow-hidden flex flex-col items-center">
             {username && username !== '' ? (
               <div className="w-full overflow-x-auto py-2 text-gray-600 dark:text-gray-400" tabIndex={0} aria-label="GitHub contributions calendar">
                 <div className="w-max mx-auto">
@@ -65,7 +65,7 @@ export const ProjectsSection: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode 
               </div>
             )}
 
-            <div className="mt-4 pt-4 border-t border-gray-200/60 dark:border-gray-700 w-full flex items-center justify-between text-xs text-gray-500 dark:text-gray-400">
+            <div className="mt-4 pt-4 border-t border-gray-200/80 dark:border-gray-700 w-full flex items-center justify-between text-xs text-gray-500 dark:text-gray-400">
               <span>Contribution data via a third-party service</span>
               <a
                 href={homeData.socialLinks.github}

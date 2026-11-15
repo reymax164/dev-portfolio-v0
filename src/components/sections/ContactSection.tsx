@@ -14,7 +14,7 @@ export const ContactSection: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-gray-100/50 dark:bg-gray-900/50 transition-colors duration-300">
+    <section id="contact" className="py-20 bg-gray-200/50 dark:bg-gray-900/50 transition-colors duration-300">
       <div className="max-w-6xl mx-auto px-6">
         
         {/* Section Header */}
@@ -72,7 +72,7 @@ export const ContactSection: React.FC = () => {
                     href={homeData.socialLinks.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-4 py-2 rounded-xl bg-gray-50 dark:bg-gray-800 hover:bg-emerald-50 dark:hover:bg-emerald-950/50 hover:text-emerald-700 dark:hover:text-emerald-300 text-gray-700 dark:text-gray-300 text-xs font-semibold border border-gray-100 dark:border-gray-700 transition-colors"
+                    className="px-4 py-2 rounded-xl bg-gray-50 dark:bg-gray-800 hover:bg-emerald-50 dark:hover:bg-emerald-950/50 hover:text-emerald-700 dark:hover:text-emerald-300 text-gray-700 dark:text-gray-300 text-xs font-semibold border border-gray-100 hover:border-emerald-300/80 dark:border-gray-700 transition-colors"
                   >
                     GitHub
                   </a>
@@ -80,7 +80,7 @@ export const ContactSection: React.FC = () => {
                     href={homeData.socialLinks.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-4 py-2 rounded-xl bg-gray-50 dark:bg-gray-800 hover:bg-emerald-50 dark:hover:bg-emerald-950/50 hover:text-emerald-700 dark:hover:text-emerald-300 text-gray-700 dark:text-gray-300 text-xs font-semibold border border-gray-100 dark:border-gray-700 transition-colors"
+                    className="px-4 py-2 rounded-xl bg-gray-50 dark:bg-gray-800 hover:bg-emerald-100/80 dark:hover:bg-emerald-950/50 hover:text-emerald-700 dark:hover:text-emerald-300 text-gray-700 dark:text-gray-300 text-xs font-semibold border border-gray-100 hover:border-emerald-300/80 dark:border-gray-700 transition-colors"
                   >
                     LinkedIn
                   </a>

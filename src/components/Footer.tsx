@@ -15,7 +15,7 @@ export const Footer: React.FC = () => {
             {homeData.firstName} {homeData.lastName}
           </p>
           <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
-            {homeData.role} • Built with React, TypeScript & Tailwind CSS
+            {homeData.role} {/* • Built with React, TypeScript & Tailwind CSS */}
           </p>
         </div>
 

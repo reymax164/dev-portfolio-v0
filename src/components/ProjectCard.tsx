@@ -7,7 +7,6 @@ interface ProjectCardProps {
 }
 
 export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
-  // Supports 'image' or 'imageUrl' depending on how it's named in your portfolioData.ts
   const projectImage = project.image || project.image;
 
   return (
@@ -50,7 +49,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
             {project.technologies.map((tech) => (
               <span
                 key={tech}
-                className="text-xs font-medium bg-gray-50 hover:bg-gray-200/60 dark:bg-gray-800 hover:dark:bg-gray-700 text-gray-700 dark:text-gray-300 border border-gray-100 dark:border-gray-700 px-2.5 py-1 rounded-lg"
+                className="text-xs font-medium bg-gray-50 hover:bg-gray-200/60 dark:bg-gray-800 hover:dark:bg-gray-700 text-gray-700 dark:text-gray-300 border border-gray-300/75 dark:border-gray-700 px-2.5 py-1 rounded-lg transition-colors"
               >
                 {tech}
               </span>
@@ -66,7 +65,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
             href={project.githubUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 text-xs font-semibold text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 px-3 py-2 rounded-xl shadow-xs transition-colors"
+            className="inline-flex items-center gap-1.5 text-xs font-semibold text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white bg-white hover:bg-gray-200/50 dark:bg-gray-900 border dark:hover:bg-gray-700 border-gray-300/75 dark:border-gray-700 px-3 py-2 rounded-xl shadow-xs transition-colors"
           >
             <GitFork className="w-4 h-4" />
             Code

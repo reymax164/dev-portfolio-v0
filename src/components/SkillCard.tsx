@@ -7,7 +7,7 @@ interface SkillCardProps {
 
 export const SkillCard: React.FC<SkillCardProps> = ({ categoryData }) => {
   return (
-    <div className="bg-white dark:bg-gray-900 p-6 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-md transition-colors flex flex-col justify-between">
+    <div className="bg-white hover:text-emerald-600 dark:hover:text-emerald-400 dark:bg-gray-900 p-6 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
       <div>
         <h3 className="text-lg font-bold mb-4 pb-2 border-b border-gray-100 dark:border-gray-800">
           {categoryData.category}
@@ -17,7 +17,7 @@ export const SkillCard: React.FC<SkillCardProps> = ({ categoryData }) => {
           {categoryData.skills.map((skill) => (
             <div
               key={skill.name}
-              className="flex items-center gap-2.5 p-2.5 rounded-xl bg-gray-50/80 dark:bg-gray-800/80 hover:bg-gray-100 dark:hover:bg-emerald-950/50 border border-gray-100/80 dark:border-gray-700 hover:border-gray-200 dark:hover:border-emerald-800 transition-all group"
+              className="flex items-center gap-2.5 p-2.5 rounded-xl bg-gray-200/40 dark:bg-gray-800/80 hover:bg-emerald-100/80 dark:hover:bg-emerald-950/50 border border-gray-200 dark:border-gray-700 hover:border-emerald-300/80 dark:hover:border-emerald-800 transition-all group"
             >
               {/* Skill Icons CDN badge */}
               <img

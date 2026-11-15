@@ -8,7 +8,7 @@ export const GithubSection: React.FC = () => {
   const username = homeData.socialLinks.github.replace(/\/$/, '').split('/').pop() || '';
 
   return (
-    <section id="github" className="py-20 bg-gray-50/50 dark:bg-gray-900/50 transition-colors duration-300">
+    <section id="github" className="py-20 bg-gray-200/50 dark:bg-gray-900/50 transition-colors duration-300">
       <div className="max-w-6xl mx-auto px-6">
         
         {/* Section Header */}
